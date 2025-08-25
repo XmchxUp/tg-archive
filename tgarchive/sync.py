@@ -58,6 +58,9 @@ class Sync:
                                         ids=ids):
                 if not m:
                     continue
+                
+                if m.type == "message" and not m.content:
+                    continue
 
                 has = True
 
